@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>منصة المهندسين</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:'Cairo', sans-serif;
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    color:#fff;
+}
+
+header{
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0b1220;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+nav a{
+    color:#fff;
+    margin:0 15px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px 30px;
+}
+
+.hero h1{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    color:#cbd5e1;
+}
+
+/* قسم التخصصات */
+.specialties{
+    text-align:center;
+    padding:30px;
+}
+
+.specialties h2{
+    margin-bottom:20px;
+    color:#38bdf8;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.btn{
+    background:#111827;
+    border:1px solid #334155;
+    color:#fff;
+    padding:12px 20px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+/* البطاقات */
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:40px;
+}
+
+.card{
+    background:#111827;
+    padding:20px;
+    width:250px;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    background:#1f2937;
+}
+
+.card h3{
+    color:#38bdf8;
+}
+
+button.main{
+    background:#38bdf8;
+    border:none;
+    padding:10px 20px;
+    border-radius:10px;
+    color:#000;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button.main:hover{
+    background:#0ea5e9;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">منصة المهندسين</div>
+    <nav>
+        <a href="#">الرئيسية</a>
+        <a href="#">المسارات</a>
+        <a href="#">الاختبار</a>
+        <a href="#">تسجيل الدخول</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>رحلتك من الدراسة إلى سوق العمل تبدأ هنا</h1>
+    <p>حدد تخصصك وابدأ مسارك المهني بخطة واضحة وموجهة</p>
+    <br>
+    <button class="main">ابدأ الاختبار</button>
+</section>
+
+<!-- التخصصات -->
+<section class="specialties">
+    <h2>اختر تخصصك الهندسي</h2>
+
+    <div class="buttons">
+        <div class="btn">الهندسة المدنية</div>
+        <div class="btn">الهندسة الكهربائية</div>
+        <div class="btn">الهندسة الميكانيكية</div>
+        <div class="btn">الهندسة المعمارية</div>
+        <div class="btn">هندسة الحاسب</div>
+        <div class="btn">الهندسة الصناعية</div>
+    </div>
+</section>
+
+<section class="cards">
+    <div class="card">
+        <h3>مسار ما قبل العمل</h3>
+        <p>مهارات أساسية لدخول سوق العمل بثقة.</p>
+    </div>
+
+    <div class="card">
+        <h3>مسار أثناء العمل</h3>
+        <p>تطوير مستمر وترقية مهاراتك المهنية.</p>
+    </div>
+
+    <div class="card">
+        <h3>اختبار تحديد المستوى</h3>
+        <p>اعرف مستواك واختر المسار المناسب لك.</p>
+    </div>
+</section>
+
+</body>
+</html>

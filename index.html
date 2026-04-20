@@ -14,6 +14,21 @@ body{
     color:#fff;
 }
 
+/* الشعار في الزاوية */
+.floating-logo{
+    position:fixed;
+    top:15px;
+    left:15px;
+    width:55px;
+    height:55px;
+    z-index:1000;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #38bdf8;
+    background:#0b1220;
+}
+
+/* الهيدر */
 header{
     padding:20px 50px;
     display:flex;
@@ -39,6 +54,7 @@ nav a:hover{
     color:#38bdf8;
 }
 
+/* الهيرو */
 .hero{
     text-align:center;
     padding:60px 20px 20px;
@@ -141,6 +157,9 @@ button.main:hover{
 
 <body>
 
+<!-- الشعار في الزاوية -->
+<img src="شعار بوصلة المهندس.png" class="floating-logo" alt="logo">
+
 <header>
     <div class="logo">منصة المهندسين</div>
     <nav>
@@ -156,7 +175,6 @@ button.main:hover{
     <p>اختر تخصصك أولًا ثم ابدأ اختبار تحديد المستوى</p>
 </section>
 
-<!-- التخصصات -->
 <section class="specialties">
     <h2>اختر تخصصك الهندسي</h2>
 

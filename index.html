@@ -41,7 +41,7 @@ nav a:hover{
 
 .hero{
     text-align:center;
-    padding:60px 20px 30px;
+    padding:60px 20px 20px;
 }
 
 .hero h1{
@@ -53,15 +53,15 @@ nav a:hover{
     color:#cbd5e1;
 }
 
-/* قسم التخصصات */
+/* التخصصات */
 .specialties{
     text-align:center;
-    padding:30px;
+    padding:20px;
 }
 
 .specialties h2{
-    margin-bottom:20px;
     color:#38bdf8;
+    margin-bottom:20px;
 }
 
 .buttons{
@@ -84,6 +84,31 @@ nav a:hover{
 .btn:hover{
     background:#38bdf8;
     color:#000;
+}
+
+.btn.active{
+    background:#38bdf8;
+    color:#000;
+}
+
+/* زر الاختبار */
+.test-btn{
+    margin-top:30px;
+    display:none;
+}
+
+button.main{
+    background:#38bdf8;
+    border:none;
+    padding:12px 25px;
+    border-radius:10px;
+    color:#000;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button.main:hover{
+    background:#0ea5e9;
 }
 
 /* البطاقات */
@@ -111,20 +136,6 @@ nav a:hover{
 .card h3{
     color:#38bdf8;
 }
-
-button.main{
-    background:#38bdf8;
-    border:none;
-    padding:10px 20px;
-    border-radius:10px;
-    color:#000;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-button.main:hover{
-    background:#0ea5e9;
-}
 </style>
 </head>
 
@@ -142,9 +153,7 @@ button.main:hover{
 
 <section class="hero">
     <h1>رحلتك من الدراسة إلى سوق العمل تبدأ هنا</h1>
-    <p>حدد تخصصك وابدأ مسارك المهني بخطة واضحة وموجهة</p>
-    <br>
-    <button class="main">ابدأ الاختبار</button>
+    <p>اختر تخصصك أولًا ثم ابدأ اختبار تحديد المستوى</p>
 </section>
 
 <!-- التخصصات -->
@@ -152,12 +161,17 @@ button.main:hover{
     <h2>اختر تخصصك الهندسي</h2>
 
     <div class="buttons">
-        <div class="btn">الهندسة المدنية</div>
-        <div class="btn">الهندسة الكهربائية</div>
-        <div class="btn">الهندسة الميكانيكية</div>
-        <div class="btn">الهندسة المعمارية</div>
-        <div class="btn">هندسة الحاسب</div>
-        <div class="btn">الهندسة الصناعية</div>
+        <div class="btn" onclick="select(this)">الهندسة المدنية</div>
+        <div class="btn" onclick="select(this)">الهندسة الكهربائية</div>
+        <div class="btn" onclick="select(this)">الهندسة الميكانيكية</div>
+        <div class="btn" onclick="select(this)">الهندسة المعمارية</div>
+        <div class="btn" onclick="select(this)">هندسة الحاسب</div>
+        <div class="btn" onclick="select(this)">الهندسة الصناعية</div>
+    </div>
+
+    <div class="test-btn" id="testBtn">
+        <br>
+        <button class="main">ابدأ الاختبار</button>
     </div>
 </section>
 
@@ -177,6 +191,17 @@ button.main:hover{
         <p>اعرف مستواك واختر المسار المناسب لك.</p>
     </div>
 </section>
+
+<script>
+function select(el){
+    let buttons = document.querySelectorAll('.btn');
+    buttons.forEach(b => b.classList.remove('active'));
+
+    el.classList.add('active');
+
+    document.getElementById('testBtn').style.display = 'block';
+}
+</script>
 
 </body>
 </html>
